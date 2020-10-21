@@ -101,26 +101,26 @@ class Database
 
 		
 	/**
-	 * Retorna os valores como um array de objetos
+	 * Retorna todos os valores como um tipo array
 	 *
 	 * @return void
 	 */
 	public function resultset()
 	{
 		$this->execute();
-		return $this->stmt->fetchAll(\PDO::FETCH_OBJ);
+		return $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
 	}
 
 		
 	/**
-	 * Retorna um objeto simples
+	 * Retorna o resultado único como um tipo array 
 	 *
 	 * @return void
 	 */
 	public function single()
 	{
 		$this->execute();
-		return $this->stmt->fetch(\PDO::FETCH_OBJ);
+		return $this->stmt->fetch(\PDO::FETCH_ASSOC);
 	}
 
 		

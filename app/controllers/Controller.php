@@ -10,16 +10,18 @@ namespace App\Controllers;
 class Controller
 {
 
+  protected $model;
+
   /**
-   * Carrega e instancia o model
+   * Define e instancia o model do controller
    *
    * @param  mixed $model
    * @return void
    */
-  public function model($model)
+  public function setModel($model)
   {
     require_once APP_ROOT . '/models/' . $model . '.php';
-    return new $model();
+    $this->model = new $model();
   }
 
   /**
