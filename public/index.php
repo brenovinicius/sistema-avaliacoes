@@ -4,6 +4,8 @@ require __DIR__ . "/../vendor/autoload.php";
 
 use CoffeeCode\Router\Router;
 
+session_start();
+
 // Instanciando o Router
 $router = new Router(APP_URL);
 
