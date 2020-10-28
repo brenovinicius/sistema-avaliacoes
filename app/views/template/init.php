@@ -7,6 +7,8 @@
 
   <link rel="icon" href="/img/favicon.ico">
 
+  <!-- app -->
+  <link rel="stylesheet" href="/css/app.css" >
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -17,6 +19,10 @@
   <link rel="stylesheet" href="/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="/css/OverlayScrollbars.min.css">
+    <!-- bootstrap-fileinput -->
+  <link rel="stylesheet" href="/css/fileinput.min.css" >
+
+
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

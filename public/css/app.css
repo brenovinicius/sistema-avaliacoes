@@ -1,0 +1,11 @@
+
+.invalid-file {
+    color: #dc3545;
+}
+
+.invalid-file-msg {
+    display: block;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+}

@@ -14,5 +14,14 @@
 <script src="/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/js/adminlte.min.js"></script>
+<!-- Bootstrap File input -->
+<script src="/js/fileinput.min.js"></script>
+<!-- Bootstrap File input -->
+<script src="/js/theme.min.js"></script>
+
+<script>
+  $("#arquivo").fileinput({'theme':'fa'});
+</script>
+
 </body>
 </html>
