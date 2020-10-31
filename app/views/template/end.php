@@ -18,6 +18,8 @@
 <script src="/js/fileinput.min.js"></script>
 <!-- Bootstrap File input -->
 <script src="/js/theme.min.js"></script>
+<!-- App -->
+<script src="/js/app.js"></script>
 
 <script>
   $("#arquivo").fileinput({'theme':'fa'});
