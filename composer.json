@@ -4,7 +4,8 @@
       "App\\": "app/"
     },
     "files": [
-      "app/core/config.php"
+      "app/core/config.php",
+      "app/helpers/validators.php"
     ]
   },
   "require": {
