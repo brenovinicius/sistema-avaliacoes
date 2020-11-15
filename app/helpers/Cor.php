@@ -3,6 +3,6 @@ namespace App\Helpers;
 
 class Cor
 {
-    public static $opcoes = ["PARDA", "PRETA", "INDIGENA", "AMARELA"];
+    public static $opcoes = ["PARDA", "PRETA", "INDIGENA", "AMARELA", "BRANCA"];
 
 }
