@@ -67,7 +67,7 @@ require APP_ROOT . '/views/template/init.php';?>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" value="<?php echo $data['aluno']['nome']; ?>" 
                     class="form-control form-control-border <?php echo (!empty($data['errors']['nome'])) ? 'is-invalid' : ''; ?>" 
-                    id="nome" placeholder="Digite seu nome..." required>
+                    id="nome" placeholder="Digite seu nome..." required readonly>
                     <?php echo (!empty($data['errors']['nome'])) ? "<span class='error invalid-feedback'>" . $data['errors']['nome'] . "</span>" : ""; ?>
               </div>
               <div class="form-group">
@@ -78,7 +78,7 @@ require APP_ROOT . '/views/template/init.php';?>
               </div>
               <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" value="<?php echo $data['aluno']['cpf']; ?>" 
+                <input type="text" name="cpf" id="cpf" value="<?php echo $data['aluno']['cpf']; ?>" 
                 class="form-control form-control-border <?php echo (!empty($data['errors']['cpf'])) ? 'is-invalid' : ''; ?>" 
                 id="cpf" placeholder="Digite seu cpf..." required>
                 <?php echo (!empty($data['errors']['cpf'])) ? "<span class='error invalid-feedback'>" . $data['errors']['cpf'] . "</span>" : ""; ?>
@@ -92,7 +92,7 @@ require APP_ROOT . '/views/template/init.php';?>
               </div>
               <div class="form-group">
                 <label for="celular">Celular</label>
-                <input type="text" name="celular" value="<?php echo $data['aluno']['celular']; ?>" 
+                <input type="text" name="celular" id="celular" value="<?php echo $data['aluno']['celular']; ?>" 
                 class="form-control form-control-border <?php echo (!empty($data['errors']['celular'])) ? 'is-invalid' : ''; ?>"
                 id="celular" placeholder="Digite seu celular..." required>
                 <?php echo (!empty($data['errors']['celular'])) ? "<span class='error invalid-feedback'>" . $data['errors']['celular'] . "</span>" : ""; ?>
@@ -127,7 +127,7 @@ require APP_ROOT . '/views/template/init.php';?>
               </div>
               <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" name="cep" value="<?php echo $data['aluno']['endereco']['cep']; ?>"
+                <input type="text" name="cep" id="cep" value="<?php echo $data['aluno']['endereco']['cep']; ?>"
                 class="form-control <?php echo (!empty($data['errors']['endereco']['cep'])) ? 'is-invalid' : ''; ?>" 
                 id="cep" placeholder="Digite o cep...">
                  <?php echo (!empty($data['errors']['endereco']['cep'])) ? "<span class='error invalid-feedback'>" . $data['errors']['endereco']['cep'] . "</span>" : ""; ?>

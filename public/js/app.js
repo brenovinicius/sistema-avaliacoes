@@ -9,3 +9,8 @@ $('#delete-dialog').on('show.bs.modal', function(event) {
 	}
 	form.attr('action', action + id);
 });
+
+// mask
+$('#cpf').mask('000.000.000-00', { reverse: true });
+$('#cep').mask('00000-000', { reverse: true });
+$('#celular').mask('(00) 00000-0000');

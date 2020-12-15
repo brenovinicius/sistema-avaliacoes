@@ -18,6 +18,8 @@
 <script src="/js/fileinput.min.js"></script>
 <!-- Bootstrap File input -->
 <script src="/js/theme.min.js"></script>
+<!-- jquery mask -->
+<script src="/js/jquery.mask.js"></script>
 <!-- App -->
 <script src="/js/app.js"></script>
 

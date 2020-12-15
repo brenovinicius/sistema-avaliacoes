@@ -206,6 +206,22 @@ class Aluno extends Model
         return $aluno;
     }
 
+    public function seExistePorCpf($cpf) {
+        $this->db->query("SELECT * FROM aluno WHERE cpf = :cpf");
+        $this->db->bind(':cpf', $cpf);
+        $this->db->single();
+        return $this->db->rowCount() > 0;
+
+    }
+
+    public function seExistePorEmail($email) {
+        $this->db->query("SELECT * FROM aluno WHERE email = :email");
+        $this->db->bind(':email', $email);
+        $this->db->single();
+        return $this->db->rowCount() > 0;
+
+    }
+
     /**
      * Verifica se já existe um aluno com a matricula informada
      *

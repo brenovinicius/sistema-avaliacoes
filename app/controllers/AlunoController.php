@@ -174,16 +174,23 @@ class AlunoController extends Controller
             if (empty($aluno['matricula'])) {
                 $dados['errors']['matricula'] = "Insira a matricula.";
             }
+            
             if (empty($aluno['cpf'])) {
                 $dados['errors']['cpf'] = "Insira o CPF";
             } else if (!validaCPF($aluno['cpf'])) {
                 $dados['errors']['cpf'] = "CPF é inválido";
+            } else if ($this->model->seExistePorCpf($aluno['cpf'])){
+                $dados['errors']['cpf'] = "CPF já cadastrado";
             }
+
             if (empty($aluno['email'])) {
                 $dados['errors']['email'] = "Insira o email.";
             } else if (!filter_var($aluno['email'], FILTER_VALIDATE_EMAIL)) {
                 $dados['errors']['email'] = "Email inválido";
+            } else if ($this->model->seExistePorEmail($aluno['email'])){
+                $dados['errors']['email'] = "Email já cadastrado";
             }
+
             if (empty($aluno['celular'])) {
                 $dados['errors']['celular'] = "Insira o número do celular.";
             } else if (!validaCelular($aluno['celular'])) {
@@ -226,6 +233,8 @@ class AlunoController extends Controller
                 $validacao = Auth::validarSenha($_POST["senha"]);
                 if (!empty($validacao)) {
                     $dados['errors']['senha'] = $validacao;
+                    $dados['acesso_inicial'] = true;   
+                } else if (!empty($dados['errors'])) {
                     $dados['acesso_inicial'] = true;
                 }
             }
